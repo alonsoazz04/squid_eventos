@@ -63,3 +63,15 @@
 2026/05/25 13:45:46| temporary disabling (Not Found) digest from be1
 2026/05/25 13:46:46| temporary disabling (Not Found) digest from be2
 2026/05/25 13:47:46| temporary disabling (Not Found) digest from be3
+2026/05/25 14:35:09| Logfile: opening log stdio:/var/spool/squid/netdb.state
+2026/05/25 14:35:09| Logfile: closing log stdio:/var/spool/squid/netdb.state
+2026/05/25 14:35:09| NETDB state saved; 1 entries, 46 msec
+2026/05/25 15:05:46| temporary disabling (Not Found) digest from be1
+2026/05/25 15:06:46| temporary disabling (Not Found) digest from be2
+2026/05/25 15:07:46| temporary disabling (Not Found) digest from be3
+2026/05/25 15:44:04| Logfile: opening log stdio:/var/spool/squid/netdb.state
+2026/05/25 15:44:04| Logfile: closing log stdio:/var/spool/squid/netdb.state
+2026/05/25 15:44:04| NETDB state saved; 1 entries, 0 msec
+2026/05/25 16:40:22| Logfile: opening log stdio:/var/spool/squid/netdb.state
+2026/05/25 16:40:22| Logfile: closing log stdio:/var/spool/squid/netdb.state
+2026/05/25 16:40:22| NETDB state saved; 1 entries, 0 msec
