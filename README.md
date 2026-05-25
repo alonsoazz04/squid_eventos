@@ -132,7 +132,7 @@ curl http://localhost:8080/
 Desde otra terminal:
 
 ```bash
-curl http://localhost:8081/
+curl http://localhost:8080/
 ```
 
 ### 5. Verificar la notificación
