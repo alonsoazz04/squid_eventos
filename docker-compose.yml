@@ -6,6 +6,7 @@ services:
       - "8080:8080"
     volumes:
       - ./squid/squid.conf:/etc/squid/squid.conf
+      - ./logs:/var/log/squid
     depends_on:
       - be1
       - be2
