@@ -1,0 +1,65 @@
+2026/05/25 11:29:54| Processing Configuration File: /etc/squid/squid.conf (depth 0)
+2026/05/25 11:29:54| Created PID file (/var/run/squid.pid)
+2026/05/25 11:29:54| Set Current Directory to /var/spool/squid
+2026/05/25 11:29:54| Creating missing swap directories
+2026/05/25 11:29:54| No cache_dir stores are configured.
+2026/05/25 11:29:54| Removing PID file (/var/run/squid.pid)
+2026/05/25 11:29:54| Processing Configuration File: /etc/squid/squid.conf (depth 0)
+2026/05/25 11:29:55| Created PID file (/var/run/squid.pid)
+2026/05/25 11:29:55| Set Current Directory to /var/spool/squid
+2026/05/25 11:29:55| Starting Squid Cache version 6.13 for x86_64-pc-linux-gnu...
+2026/05/25 11:29:55| Service Name: squid
+2026/05/25 11:29:55| Process ID 40
+2026/05/25 11:29:55| Process Roles: master worker
+2026/05/25 11:29:55| With 1024 file descriptors available
+2026/05/25 11:29:55| Initializing IP Cache...
+2026/05/25 11:29:55| DNS IPv6 socket created at [::], FD 8
+2026/05/25 11:29:55| DNS IPv4 socket created at 0.0.0.0, FD 9
+2026/05/25 11:29:55| Adding nameserver 127.0.0.11 from /etc/resolv.conf
+2026/05/25 11:29:55| Adding domain Home from /etc/resolv.conf
+2026/05/25 11:29:55| Adding ndots 1 from /etc/resolv.conf
+2026/05/25 11:29:55| Logfile: opening log stdio:/var/log/squid/access.log
+2026/05/25 11:29:55| Local cache digest enabled; rebuild/rewrite every 3600/3600 sec
+2026/05/25 11:29:55| Store logging disabled
+2026/05/25 11:29:55| Swap maxSize 0 + 262144 KB, estimated 20164 objects
+2026/05/25 11:29:55| Target number of buckets: 1008
+2026/05/25 11:29:55| Using 8192 Store buckets
+2026/05/25 11:29:55| Max Mem  size: 262144 KB
+2026/05/25 11:29:55| Max Swap size: 0 KB
+2026/05/25 11:29:55| Using Least Load store dir selection
+2026/05/25 11:29:55| Set Current Directory to /var/spool/squid
+2026/05/25 11:29:55| Finished loading MIME types and icons.
+2026/05/25 11:29:55| HTCP Disabled.
+2026/05/25 11:29:55| Pinger socket opened on FD 13
+2026/05/25 11:29:55| Squid plugin modules loaded: 0
+2026/05/25 11:29:55| Adaptation support is off.
+2026/05/25 11:29:55| Accepting reverse-proxy HTTP Socket connections at conn3 local=[::]:8080 remote=[::] FD 11 flags=9
+    listening port: 8080
+2026/05/25 11:29:55| Configuring Parent be2
+2026/05/25 11:29:55| Configuring Parent be3
+2026/05/25 11:29:55| Configuring Parent be1
+2026/05/25 11:29:55 pinger| Initialising ICMP pinger ...
+2026/05/25 11:29:55 pinger| ICMP socket opened.
+2026/05/25 11:29:55 pinger| ICMPv6 socket opened
+2026/05/25 11:29:56| storeLateRelease: released 0 objects
+2026/05/25 11:34:09| temporary disabling (Not Found) digest from be1
+2026/05/25 11:35:09| temporary disabling (Not Found) digest from be2
+2026/05/25 11:36:09| temporary disabling (Not Found) digest from be3
+2026/05/25 11:39:09| temporary disabling (Not Found) digest from be1
+2026/05/25 11:40:09| temporary disabling (Not Found) digest from be2
+2026/05/25 11:41:09| temporary disabling (Not Found) digest from be3
+2026/05/25 11:49:09| temporary disabling (Not Found) digest from be1
+2026/05/25 11:50:09| temporary disabling (Not Found) digest from be2
+2026/05/25 11:51:09| temporary disabling (Not Found) digest from be3
+2026/05/25 12:09:09| temporary disabling (Not Found) digest from be1
+2026/05/25 12:10:09| temporary disabling (Not Found) digest from be2
+2026/05/25 12:11:09| temporary disabling (Not Found) digest from be3
+2026/05/25 12:20:51| Logfile: opening log stdio:/var/spool/squid/netdb.state
+2026/05/25 12:20:51| Logfile: closing log stdio:/var/spool/squid/netdb.state
+2026/05/25 12:20:51| NETDB state saved; 1 entries, 0 msec
+2026/05/25 13:45:46| Logfile: opening log stdio:/var/spool/squid/netdb.state
+2026/05/25 13:45:46| Logfile: closing log stdio:/var/spool/squid/netdb.state
+2026/05/25 13:45:46| NETDB state saved; 1 entries, 3 msec
+2026/05/25 13:45:46| temporary disabling (Not Found) digest from be1
+2026/05/25 13:46:46| temporary disabling (Not Found) digest from be2
+2026/05/25 13:47:46| temporary disabling (Not Found) digest from be3
