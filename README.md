@@ -141,16 +141,6 @@ Al realizar la petición, debe recibirse un mensaje en Telegram con información
 
 ## Demostración en vídeo
 
-El enunciado establece que el vídeo debe incluir tres partes: los pasos de configuración de la captura de eventos, una explicación breve de la maqueta y la demostración del evento generando la notificación.[1]
-
-Una propuesta de guion es:
-
-1. Mostrar la arquitectura: Squid + backends + watcher + Telegram.
-2. Enseñar `squid.conf` y los scripts usados.
-3. Lanzar el watcher.
-4. Ejecutar `curl` contra Squid.
-5. Mostrar el mensaje recibido en Telegram.
-
 ## Incidencias encontradas
 
 Durante la implementación aparecieron varios problemas prácticos:
