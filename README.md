@@ -1,28 +1,28 @@
 # Trabajo teórico-práctico: eventos con Squid y Telegram
 
-Este proyecto amplía la práctica anterior de balanceo de carga con **Squid** para generar una notificación cada vez que un cliente realiza una petición al balanceador. El enunciado indica que, para los componentes de balanceo de carga, debe generarse un evento por cada petición del cliente, informando de la operación, la dirección del cliente y el recurso solicitado, y especifica que en **Squid** una solución válida es analizar sus logs en tiempo real para emitir notificaciones.[1]
+Este proyecto amplía la práctica anterior de balanceo de carga con **Squid** para generar una notificación cada vez que un cliente realiza una petición al balanceador. El enunciado indica que, para los componentes de balanceo de carga, debe generarse un evento por cada petición del cliente, informando de la operación, la dirección del cliente y el recurso solicitado, y especifica que en **Squid** una solución válida es analizar sus logs en tiempo real para emitir notificaciones.
 
-La solución implementada consiste en monitorizar el fichero `access.log` de Squid en tiempo real y enviar una alerta a **Telegram** mediante un bot cada vez que se detecta una nueva petición HTTP. De esta forma, se cumple el requisito de capturar eventos sobre el balanceador y demostrar su señalización mediante una notificación externa.[1]
+La solución implementada consiste en monitorizar el fichero `access.log` de Squid en tiempo real y enviar una alerta a **Telegram** mediante un bot cada vez que se detecta una nueva petición HTTP. De esta forma, se cumple el requisito de capturar eventos sobre el balanceador y demostrar su señalización mediante una notificación externa.
 
 ## Objetivo
 
-El objetivo de esta práctica es detectar eventos generados por las peticiones entrantes al balanceador Squid y notificar dichos eventos automáticamente. Según el documento de la práctica, el evento debe informar de qué operación realiza el cliente, su dirección IP y sobre qué elemento actúa, por ejemplo `cliente 192.168.1.2 GET /status.html`.[1]
+El objetivo de esta práctica es detectar eventos generados por las peticiones entrantes al balanceador Squid y notificar dichos eventos automáticamente. 
 
 ## Maqueta de demostración
 
 La maqueta utilizada parte del trabajo anterior y está formada por los siguientes elementos:
 
-- **Frontend**: un contenedor Docker con Squid actuando como reverse proxy/balanceador.[1]
+- **Frontend**: un contenedor Docker con Squid actuando como reverse proxy/balanceador.
 - **Backends**: dos o tres contenedores HTTP ligeros (`be1`, `be2`, `be3`) usados para responder a las peticiones.
-- **Watcher de eventos**: un script que analiza en tiempo real `access.log` de Squid.[1]
-- **Canal de notificación**: un bot de Telegram que recibe el aviso generado por cada nueva petición.[1]
+- **Watcher de eventos**: un script que analiza en tiempo real `access.log` de Squid.
+- **Canal de notificación**: un bot de Telegram que recibe el aviso generado por cada nueva petición.
 
 ## Funcionamiento
 
 El flujo de la solución es el siguiente:
 
 1. Un cliente realiza una petición HTTP al frontend Squid.
-2. Squid registra la petición en `access.log`.[1]
+2. Squid registra la petición en `access.log`.
 3. El script `watch_squid_events.sh` detecta una nueva línea en el log y extrae la información relevante.
 4. El script construye un mensaje con la IP del cliente y el recurso solicitado.
 5. El mensaje se envía a Telegram usando la API HTTP del bot.
@@ -60,7 +60,7 @@ Se debe crear un bot con **@BotFather** y obtener su token HTTP API. Además, es
 
 ### 2. Configurar Squid
 
-El fichero `squid/squid.conf` debe incluir el registro de accesos, ya que el enunciado propone analizar los logs de Squid en tiempo real para generar notificaciones.[1]
+El fichero `squid/squid.conf` debe incluir el registro de accesos, ya que el enunciado propone analizar los logs de Squid en tiempo real para generar notificaciones.
 
 Ejemplo de líneas relevantes:
 
@@ -132,7 +132,7 @@ curl http://localhost:8080/
 Desde otra terminal:
 
 ```bash
-curl http://localhost:8081/
+curl http://localhost:8080/
 ```
 
 ### 5. Verificar la notificación
@@ -141,15 +141,7 @@ Al realizar la petición, debe recibirse un mensaje en Telegram con información
 
 ## Demostración en vídeo
 
-El enunciado establece que el vídeo debe incluir tres partes: los pasos de configuración de la captura de eventos, una explicación breve de la maqueta y la demostración del evento generando la notificación.[1]
-
-Una propuesta de guion es:
-
-1. Mostrar la arquitectura: Squid + backends + watcher + Telegram.
-2. Enseñar `squid.conf` y los scripts usados.
-3. Lanzar el watcher.
-4. Ejecutar `curl` contra Squid.
-5. Mostrar el mensaje recibido en Telegram.
+https://pruebasaluuclm-my.sharepoint.com/:v:/g/personal/alonsoantonio_zamora_alu_uclm_es/IQD9vD9XvbuKTpUUvNgpTV1bAd80QWcs489-QGpGcEZYbS0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kjbbnD
 
 ## Incidencias encontradas
 
@@ -164,4 +156,4 @@ Estas incidencias forman parte de la puesta en marcha real de la maqueta y ayuda
 
 ## Resultado
 
-El resultado final es una ampliación funcional del balanceador Squid capaz de detectar en tiempo real cada petición de cliente y señalizarla mediante una notificación de Telegram. Esto cumple el objetivo del trabajo, que consiste en ampliar la demo anterior con un mecanismo de captura y notificación de eventos asociado a la operación habitual del servicio.[1]
+El resultado final es una ampliación funcional del balanceador Squid capaz de detectar en tiempo real cada petición de cliente y señalizarla mediante una notificación de Telegram. Esto cumple el objetivo del trabajo, que consiste en ampliar la demo anterior con un mecanismo de captura y notificación de eventos asociado a la operación habitual del servicio.
