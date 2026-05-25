@@ -1,0 +1,30 @@
+services:
+  squid-fe:
+    image: ubuntu/squid:latest
+    container_name: squid-fe
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./squid/squid.conf:/etc/squid/squid.conf
+    depends_on:
+      - be1
+      - be2
+      - be3
+
+  be1:
+    image: nginx:alpine
+    container_name: be1
+    volumes:
+      - ./be1/index.html:/usr/share/nginx/html/index.html:ro
+
+  be2:
+    image: nginx:alpine
+    container_name: be2
+    volumes:
+      - ./be2/index.html:/usr/share/nginx/html/index.html:ro
+
+  be3:
+    image: nginx:alpine
+    container_name: be3
+    volumes:
+      - ./be3/index.html:/usr/share/nginx/html/index.html:ro
