@@ -1,6 +1,6 @@
-# Trabajo teórico-práctico: eventos con Squid y Telegram
+# Trabajo teórico-práctico: eventos
 
-Este proyecto amplía la práctica anterior de balanceo de carga con **Squid** para generar una notificación cada vez que un cliente realiza una petición al balanceador. El enunciado indica que, para los componentes de balanceo de carga, debe generarse un evento por cada petición del cliente, informando de la operación, la dirección del cliente y el recurso solicitado, y especifica que en **Squid** una solución válida es analizar sus logs en tiempo real para emitir notificaciones.
+Este proyecto amplía la práctica anterior de balanceo de carga con **Squid** para generar una notificación cada vez que un cliente realiza una petición al balanceador. Para los componentes de balanceo de carga, debe generarse un evento por cada petición del cliente, informando de la operación, la dirección del cliente y el recurso solicitado, y especifica que en **Squid** una solución válida es analizar sus logs en tiempo real para emitir notificaciones.
 
 La solución implementada consiste en monitorizar el fichero `access.log` de Squid en tiempo real y enviar una alerta a **Telegram** mediante un bot cada vez que se detecta una nueva petición HTTP. De esta forma, se cumple el requisito de capturar eventos sobre el balanceador y demostrar su señalización mediante una notificación externa.
 
@@ -60,7 +60,7 @@ Se debe crear un bot con **@BotFather** y obtener su token HTTP API. Además, es
 
 ### 2. Configurar Squid
 
-El fichero `squid/squid.conf` debe incluir el registro de accesos, ya que el enunciado propone analizar los logs de Squid en tiempo real para generar notificaciones.
+El fichero `squid/squid.conf` debe incluir el registro de accesos.
 
 Ejemplo de líneas relevantes:
 
