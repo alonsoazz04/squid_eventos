@@ -153,7 +153,3 @@ Durante la implementación aparecieron varios problemas prácticos:
 - Necesidad de adaptar el watcher al formato real del log de Squid.
 
 Estas incidencias forman parte de la puesta en marcha real de la maqueta y ayudan a justificar las decisiones de configuración adoptadas durante la práctica.
-
-## Resultado
-
-El resultado final es una ampliación funcional del balanceador Squid capaz de detectar en tiempo real cada petición de cliente y señalizarla mediante una notificación de Telegram. Esto cumple el objetivo del trabajo, que consiste en ampliar la demo anterior con un mecanismo de captura y notificación de eventos asociado a la operación habitual del servicio.
